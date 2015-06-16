@@ -1,0 +1,31 @@
+.cke_contents {
+	border: none !important;
+}
+.cke_chrome {
+	background: none !important;
+	padding: 0 !important;
+	border-radius: 0 !important;
+}
+.cke_bottom, 
+.cke_top {
+	background: #fff !important;
+	padding: 3px 3px 0 3px !important;
+}
+.cke_top {
+	border-bottom: 1px solid #d2d6de !important;
+}
+.cke_bottom {
+	border-top: 1px solid #d2d6de !important;
+}
+/**
+ * Posts page styles
+ */
+.posts-table-container {
+	margin-top: 10px;
+}
+.post-title:hover .post-options {
+	visibility: visible;
+}
+.post-options {
+	visibility: hidden;
+}
