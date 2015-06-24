@@ -21,7 +21,25 @@ use yii\widgets\ActiveForm;
 	</div>
 	<div class="col-md-7">
 		<div class="form-group">
-		<?= Html::activeTextarea($meta, "[{$i}]meta_value", ['rows' => 3, 'class'=>'form-control meta-value']); ?>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#default_meta_<?= $i; ?>" aria-controls="default_meta_<?= $i; ?>" role="tab" data-toggle="tab"><?= Yii::t('app','Default') ?></a></li>
+				<li role="presentation"><a href="#ru_meta_<?= $i; ?>" aria-controls="ru_meta_<?= $i; ?>" role="tab" data-toggle="tab"><?= Yii::t('app','Uzbek') ?></a></li>
+				<li role="presentation"><a href="#uz_meta_<?= $i; ?>" aria-controls="uz_meta_<?= $i; ?>" role="tab" data-toggle="tab"><?= Yii::t('app','Russian') ?></a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="default_meta_<?= $i; ?>">
+					<?//= Html::activeLabel($meta, "[{$i}]meta_value", ['class'=>'control-label']); ?>
+					<?= Html::activeTextarea($meta, "[{$i}]meta_value", ['rows' => 3, 'class'=>'form-control meta-value']); ?>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="ru_meta_<?= $i; ?>">
+					<?//= Html::activeLabel($meta, "[{$i}]meta_value_ru", ['class'=>'control-label']); ?>
+					<?= Html::activeTextarea($meta, "[{$i}]meta_value_ru", ['rows' => 3, 'class'=>'form-control meta-value-ru','data-lang'=>'ru']); ?>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="uz_meta_<?= $i; ?>">
+					<?//= Html::activeLabel($meta, "[{$i}]meta_value_uz", ['class'=>'control-label']); ?>
+					<?= Html::activeTextarea($meta, "[{$i}]meta_value_uz", ['rows' => 3, 'class'=>'form-control meta-value-uz','data-lang'=>'uz']); ?>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -63,12 +81,22 @@ $("#custom-fields").on("click",".update-item",function(e){
 	update_field = $(update_btn).parent().parent().find(".result");
 	var _meta_id = $(update_btn).parent().parent().find("[type=hidden]").val();
 	var _meta_key = $(update_btn).parent().find(".meta-key").val();
-	var _meta_value = $(update_btn).parent().parent().find(".meta-value").val();
+	var _data = { 
+		Postmeta: { 
+			post_id: _post_id, 
+			meta_id: _meta_id, 
+			meta_key: _meta_key,
+			meta_value: $(update_btn).parent().parent().find(".meta-value").val(),
+			meta_value_ru: $(update_btn).parent().parent().find(".meta-value-ru").val(),
+			meta_value_uz: $(update_btn).parent().parent().find(".meta-value-uz").val(),
+		}, 
+		_csrf: csrfToken };
+
 	$.ajax({
 		type: "post",
 		cache: false,
 		url: "' . Url::to(['posts/update-meta']) . '&meta_id=" + _meta_id,
-		data: { Postmeta: { post_id: _post_id, meta_id: _meta_id, meta_key: _meta_key, meta_value: _meta_value }, _csrf: csrfToken },
+		data: _data,
 		success:function(response) {
 			if( response["error"] == 0 ) {
 				$(update_field).addClass(".success");

@@ -6,7 +6,8 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
-use dosamigos\taggable\Taggable;
+use omgdef\multilingual\MultilingualBehavior;
+use omgdef\multilingual\MultilingualQuery;
 use common\models\User;
 //use creocoder\taggable\TaggableBehavior;
 use yii\db\Expression;
@@ -59,6 +60,25 @@ class Posts extends \yii\db\ActiveRecord
 				'createdAtAttribute' => 'post_date',
 				'updatedAtAttribute' => 'post_modified',
 				'value' => new Expression('NOW()'),
+			],
+			'ml' => [
+				'class' => MultilingualBehavior::className(),
+				'languages' => [
+					'uz' => 'Uzbek',
+					'ru' => 'Russian',
+					'en' => 'English',
+				],
+				'languageField' => 'post_lang',
+				//'localizedPrefix' => '',
+				'requireTranslations' => true,
+				//'dynamicLangClass' => false,
+				//'langClassName' => PostsLang::className(), // or namespace/for/a/class/PostLang
+				'defaultLanguage' => 'en',
+				'langForeignKey' => 'post_id',
+				'tableName' => "{{%posts_lang}}",
+				'attributes' => [
+					'post_title', 'post_content',
+				]
 			],
 			// [
 			// 	'class' => Taggable::className(),
@@ -116,6 +136,11 @@ class Posts extends \yii\db\ActiveRecord
 		];
 	}
 
+	public static function find()
+	{
+		return new MultilingualQuery(get_called_class());
+	}
+
 	public function getStatus() {
 		$status =  [
 			['key' => 'default', 'value' => Yii::t('app','Default')],
@@ -156,7 +181,7 @@ class Posts extends \yii\db\ActiveRecord
 	 */
 	public function getMetas()
 	{
-		return $this->hasMany(Postmeta::className(), ['post_id' => 'ID']);
+		return $this->hasMany(Postmeta::className(), ['post_id' => 'ID'])->multilingual();
 	}
 
 	/**
@@ -281,9 +306,17 @@ class Posts extends \yii\db\ActiveRecord
 		}
 
 		foreach ($this->post_metas as $post_meta) {
-			$meta = Postmeta::findOne($post_meta['meta_id']);
+			//$meta = Postmeta::findOne($post_meta['meta_id']);
+			$meta = Postmeta::find()->multilingual()->andWhere(['meta_id' => $post_meta['meta_id']])->one();
 			$meta->post_id = $this->ID;
 			$meta->meta_value = $post_meta['meta_value'];
+			$defaultLanguage = $this->defaultLanguage;
+			foreach ($meta->languages as $lang) {
+				if ($lang == $this->defaultLanguage) {
+					$post_meta['meta_value_'.$lang] = $post_meta['meta_value'];
+				}
+				$meta->{'meta_value_'.$lang} = $post_meta['meta_value_'.$lang];
+			}
 			$meta->save();
 		}
 

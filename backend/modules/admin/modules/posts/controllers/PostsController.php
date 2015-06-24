@@ -176,7 +176,8 @@ class PostsController extends Controller
 	}
 	public function actionUpdateMeta($meta_id)
 	{
-		$model = Postmeta::findOne($meta_id);
+		//$model = Postmeta::findOne($meta_id);
+		$model = Postmeta::find()->multilingual()->andWhere(['meta_id' => $meta_id])->one();
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
 			if (Yii::$app->request->isAjax) {
 				$response = ['error'=>0,'message'=>Yii::t('app','Updated.')];
@@ -227,11 +228,11 @@ class PostsController extends Controller
 	 * @throws NotFoundHttpException if the model cannot be found
 	 */
 	protected function findModel($id)
-	{
-		if (($model = Posts::findOne($id)) !== null) {
-			return $model;
-		} else {
-			throw new NotFoundHttpException('The requested page does not exist.');
-		}
-	}
+    {
+        if (($model = Posts::find()->multilingual()->andWhere(['id' => $id])->one()) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
 }

@@ -56,7 +56,7 @@ class PostsSearch extends Posts
             return $dataProvider;
         }
 
-        $query->joinWith('terms');
+        //$query->joinWith('terms');
 
         $query->andFilterWhere([
             'ID' => $this->ID,

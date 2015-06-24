@@ -1,6 +1,6 @@
 Posts meta
 add/update/delete actionlarda _csrf token validation ni solash kerak
-
 Posts gridview da view/edit/delete linklarini ishga tushirish kerak
-
 Posts termsda frequnecy ni sozlash kerak
+Languages hardcoded
+Posts, Postmetas translation fieldlar hardcoded

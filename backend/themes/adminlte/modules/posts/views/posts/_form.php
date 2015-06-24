@@ -16,20 +16,50 @@ use dosamigos\selectize\SelectizeTextInput;
 $this->registerJsFile(Yii::$app->request->BaseUrl.'/media/plugins/bootstrap-select/js/bootstrap-select.min.js',['depends'=>[yii\bootstrap\BootstrapPluginAsset::className()]]);
 $this->registerCssFile(Yii::$app->request->BaseUrl.'/media/plugins/bootstrap-select/css/bootstrap-select.min.css',['depends'=>[yii\bootstrap\BootstrapPluginAsset::className()]])
 ?>
-
 <div class="row">
 <?php $form = ActiveForm::begin(); ?>
 <div class="col-md-8">
 	<div class="box posts-form">
+		<div class="box-header">
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#default" aria-controls="default" role="tab" data-toggle="tab"><?= Yii::t('app','Default') ?></a></li>
+				<li role="presentation"><a href="#ru" aria-controls="ru" role="tab" data-toggle="tab"><?= Yii::t('app','Uzbek') ?></a></li>
+				<li role="presentation"><a href="#uz" aria-controls="uz" role="tab" data-toggle="tab"><?= Yii::t('app','Russian') ?></a></li>
+			</ul>
+		</div>
 		<div class="box-body">
-			<?= $form->field($model, 'post_title')->textInput() ?>
-			<?= $form->field($model, 'post_content')->widget(CKEditor::className(), [
-				'options' => ['rows' => 15],
-				'preset' => 'custom',
-				'clientOptions' => [
-					'customConfig' => Yii::$app->request->BaseUrl.'/media/plugins/ckeditor/config.js',
-				],
-			]) ?>
+			<div class="tab-content">
+			<div role="tabpanel" class="tab-pane fade in active" id="default">
+				<?= $form->field($model, 'post_title')->textInput() ?>
+				<?= $form->field($model, 'post_content')->widget(CKEditor::className(), [
+					'options' => ['rows' => 15],
+					'preset' => 'custom',
+					'clientOptions' => [
+						'customConfig' => Yii::$app->request->BaseUrl.'/media/plugins/ckeditor/config.js',
+					],
+				]) ?>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="ru">
+				<?= $form->field($model, 'post_title_ru')->textInput() ?>
+				<?= $form->field($model, 'post_content_ru')->widget(CKEditor::className(), [
+					'options' => ['rows' => 15],
+					'preset' => 'custom',
+					'clientOptions' => [
+						'customConfig' => Yii::$app->request->BaseUrl.'/media/plugins/ckeditor/config.js',
+					],
+				]) ?>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="uz">
+				<?= $form->field($model, 'post_title_uz')->textInput() ?>
+				<?= $form->field($model, 'post_content_uz')->widget(CKEditor::className(), [
+					'options' => ['rows' => 15],
+					'preset' => 'custom',
+					'clientOptions' => [
+						'customConfig' => Yii::$app->request->BaseUrl.'/media/plugins/ckeditor/config.js',
+					],
+				]) ?>
+			</div>
+			</div>
 		</div>
 	</div>
 	<div class="box posts-form-custom-fields">
