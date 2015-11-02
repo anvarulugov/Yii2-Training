@@ -519,30 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "backend/themes/adminlte/layouts/main.php",
-			"settings":
-			{
-				"buffer_size": 6407,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "common/config/main.php",
-			"settings":
-			{
-				"buffer_size": 667,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/wserver/htdocs/credoprint/public_html/themes/credoprint/views/widgets/sidebar.php",
-			"settings":
-			{
-				"buffer_size": 4665,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -609,25 +585,43 @@
 		"/D/wserver/htdocs/yii2/advanced",
 		"/D/wserver/htdocs/yii2/advanced/backend",
 		"/D/wserver/htdocs/yii2/advanced/backend/config",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/controllers",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/models",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/views/default",
+		"/D/wserver/htdocs/yii2/advanced/backend/modules",
+		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin",
+		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules",
+		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts",
 		"/D/wserver/htdocs/yii2/advanced/backend/themes",
 		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte",
 		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/layouts",
 		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/modules",
 		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/modules/posts",
-		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/modules/posts/views",
-		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/modules/posts/views/posts",
-		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/widgets",
-		"/D/wserver/htdocs/yii2/advanced/frontend/views",
-		"/D/wserver/htdocs/yii2/advanced/frontend/views/layouts",
-		"/D/wserver/htdocs/yii2/advanced/vendor/omgdef",
-		"/D/wserver/htdocs/yii2/advanced/vendor/omgdef/yii2-multilingual-behavior",
-		"/D/wserver/htdocs/yii2/advanced/vendor/omgdef/yii2-multilingual-behavior/src"
+		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/widgets"
 	],
 	"file_history":
 	[
+		"/D/wserver/htdocs/7days/public_html/wp-content/themes/7days2/functions.php",
+		"/D/wserver/htdocs/edu.teasoft.uz/wp-config.php",
+		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/layouts/main.php",
+		"/D/wserver/htdocs/yii2/advanced/common/config/main.php",
+		"/D/wserver/htdocs/credoprint/public_html/themes/credoprint/views/widgets/sidebar.php",
+		"/C/Users/anvar/Downloads/Compressed/lms15/lms15/elearningwp/wpml-config.xml",
+		"/C/Temp/1-yii.php",
+		"/C/Temp/2-web.php",
+		"/C/Temp/1-web.php",
+		"/C/Temp/1-fraction-left.php",
+		"/C/Temp/2-index.php",
+		"/C/Temp/1-CategoriesController.php",
+		"/C/Temp/1-view_deputy.php",
+		"/C/Temp/1-SiteController.php",
+		"/C/Temp/1-contact.php",
+		"/C/Temp/3-index.php",
+		"/C/Temp/1-site_layout.php",
+		"/C/Temp/1-main.php",
+		"/C/Temp/1-_content_deputy.php",
+		"/C/Temp/1-FractionsLeftWidget.php",
+		"/C/Temp/1-view_left.php",
+		"/C/Temp/1-view_fraction.php",
+		"/C/Temp/1-params.php",
+		"/C/Temp/1-index.php",
 		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/widgets/navigation.php",
 		"/D/wserver/htdocs/credoprint/public_html/themes/credoprint/views/layouts/main.php",
 		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/models/Posts.php",
@@ -661,10 +655,8 @@
 		"/D/wserver/htdocs/wpdemo/wp-content/themes/mh-magazine-lite-child/style.css",
 		"/D/wserver/htdocs/yii2/advanced/backend/web/media/js/admin.js",
 		"/D/wserver/htdocs/ethnic/public_html/backend/views/items/_form.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/layouts/main.php",
 		"/D/wserver/htdocs/credoprint/public_html/protected/controllers/ServicesController.php",
 		"/D/wserver/htdocs/ethnic/public_html/backend/views/categoriesmeta/_form.php",
-		"/D/wserver/htdocs/yii2/advanced/common/config/main.php",
 		"/D/wserver/htdocs/hinews/wp-content/plugins/aus-news-grabber/grabbers/class.newsrucom.php",
 		"/D/wserver/htdocs/hinews/wp-content/plugins/aus-news-grabber/grabbers/class.alfalt.php",
 		"/D/wserver/htdocs/7days/public_html/parse.php",
@@ -733,29 +725,7 @@
 		"/D/wserver/htdocs/yii2/advanced/vendor/2amigos/yii2-ckeditor-widget/src/assets/ckeditor/build-config.js",
 		"/D/wserver/htdocs/credoprint/public_html/html2/dist/js/app.js",
 		"/D/wserver/htdocs/yii2/basic/vendor/dmstr/yii2-adminlte-asset/web/AdminLteAsset.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/web/media/css/AdminLTE.min.css",
-		"/D/wserver/htdocs/yii2/basic/assets/AppAsset.php",
-		"/D/wserver/htdocs/yii2/basic admin lte/vendor/dmstr/yii2-adminlte-asset/widgets/Alert.php",
-		"/D/wserver/htdocs/yii2/basic admin lte/vendor/dmstr/yii2-adminlte-asset/web/AdminLteAsset.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/controllers/DefaultController.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/Posts.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/controllers/DefaultController.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/Admin.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin2/Admin.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/modules/admin/modules/posts/posts/create.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/Posts.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/themes/adminlte/posts/create.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/views/posts/create.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/web/media/js/app.min.js",
-		"/D/wserver/htdocs/yii2/advanced/backend/web/media/css/skins/_all-skins.css",
-		"/D/wserver/htdocs/credoprint/public_html/html2/dist/css/AdminLTE.css",
-		"/D/wserver/htdocs/yii2/advanced/backend/views/layouts/main.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/views/posts/update.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/views/postcategories/_form.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/views/default/index.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/models/PostcategoriesSearch.php",
-		"/D/wserver/htdocs/yii2/advanced/backend/modules/admin/modules/posts/controllers/PostcategoriesController.php",
-		"/D/wserver/htdocs/yii2/advanced/common/config/main-local.php"
+		"/D/wserver/htdocs/yii2/advanced/backend/web/media/css/AdminLTE.min.css"
 	],
 	"find":
 	{
@@ -773,6 +743,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"boot.loc",
+			"bosh",
+			"pull-",
 			"uz_meta",
 			"ru_meta",
 			"default_meta",
@@ -897,10 +870,7 @@
 			"Admin",
 			"audit_period_start",
 			"order_date",
-			"hozirgi_ish_sana",
-			"'",
-			"comment",
-			"contai"
+			"hozirgi_ish_sana"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1046,97 +1016,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "backend/themes/adminlte/layouts/main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6407,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								624,
-								624
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 627.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "common/config/main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 667,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								659,
-								659
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/wserver/htdocs/credoprint/public_html/themes/credoprint/views/widgets/sidebar.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4665,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								295,
-								295
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 798.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
